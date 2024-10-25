@@ -38,6 +38,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path='/' element={<Shop />} />
+            <Route path='/E-commerce' element={<Shop />} /> 
             <Route path='/womens' element={<ShopCategory gender="women" />} />
             <Route path='/mens' element={<Categories gender="men" />} />
             <Route path="/product/:productId" element={<ProductDetail addToCart={addToCart} />} />
