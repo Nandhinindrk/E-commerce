@@ -1,0 +1,142 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures logo and menus are spaced correctly */
+    align-items: center; /* Vertically centers the content */
+    padding: 16px;
+    box-shadow: 0 1px 3px black;
+    position: relative; /* Ensures the navbar is positioned correctly relative to the menu */
+    z-index: 10; /* Ensures navbar stays on top of the hamburger menu */
+}
+
+.navbar-logo {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 20; /* Keeps the logo above the navbar menu on mobile */
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    z-index: 10; /* Keeps the menu on top of the content */
+}
+
+.navbar-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.active-indicator {
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #3a3838;
+    margin-top: 4px;
+}
+
+.nav-logo-cart {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    z-index: 20; /* Keeps the cart and login button above other content */
+}
+
+.nav-logo-cart button {
+    width: 157px;
+    height: 58px;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.nav-logo-cart button:active {
+    background: #f3f3f3;
+}
+
+.nav-logo-cart-a {
+    display: flex;
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+    margin-left: -10px;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 30; /* Ensures the hamburger icon stays on top */
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #626262;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+/* Responsive Menu for Mobile */
+@media only screen and (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        z-index: 15; /* Keeps the menu below the logo but above the rest of the content */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-menu.open {
+        display: flex; /* Shows the menu when the hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Adjusting logo and cart layout on mobile */
+    .navbar-logo {
+        margin-left: 10px;
+    }
+
+    .nav-logo-cart {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-menu {
+        gap: 30px;
+    }
+
+    .nav-logo-cart {
+        gap: 20px;
+    }
+}
