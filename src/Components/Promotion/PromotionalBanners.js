@@ -13,7 +13,6 @@ const PromotionalBanners = () => {
           <button className="promo-button">Shop Now</button>
         </Link>
       </div>
-
     </div>
   );
 };

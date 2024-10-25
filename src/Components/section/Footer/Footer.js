@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 import instagram from './instagram.png'
 import location from './location.png'
 import whatsapp from './whatsapp.png'
@@ -12,19 +13,19 @@ const Footer = () => {
             <div className="last-section-content">
                 <div className="column">
                     <h3>Collections</h3>
-                    <a href="/womens#womens-wear">Womens wear</a>
+                    <Link to="/womens">Womens wear</Link>
                     <br></br>
-                    <a href="/mens#mens-wear">Mens wear</a>
+                    <Link to="/mens">Mens wear</Link>
                 </div>
                 <div className="column">
                     <h3>Legal</h3>
-                    <a href="/contact#privacy-policy">Privacy Policy</a>
+                    <Link to="/contact#privacy-policy">Privacy Policy</Link>
                     <br></br>
-                    <a href="/contact#terms-conditions">Terms & Conditions</a>
+                    <Link to="/contact#terms-conditions">Terms & Conditions</Link>
                     <br></br>
-                    <a href="/contact#refund-policy">Refund and Returns Policy</a>
+                    <Link to="/contact#refund-policy">Refund and Returns Policy</Link>
                     <br></br>
-                    <a href="/contact#shipping-policy">Shipping Policy</a>
+                    <Link to="/contact#shipping-policy">Shipping Policy</Link>
                     {/* Add social media links or icons here */}
                 </div>
                 <div className="column">
@@ -41,6 +42,7 @@ const Footer = () => {
             <div className="container text-center">
                 <p>&copy; 2024 SK FASHION. All rights reserved.</p>
             </div>
+            
         </div>
     );
 };

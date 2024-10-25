@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import kurti from '../Assets/kurti.avif'
 import jeans from '../Assets/jeans.avif'
 import summer from '../Assets/summer.avif'
@@ -41,9 +42,9 @@ const Main = () => {
               {/* Left Side: One Picture */}
               <div className="col-12 col-md-6 mb-3">
                 <div className="text-center">
-                <a href="/womens">
+                <Link to="/womens">
                   <img src={kurti} className="img-fluid" alt="left" />
-                  </a>
+                  </Link>
                 </div>
               </div>
   
@@ -51,24 +52,24 @@ const Main = () => {
               <div className="col-12 col-md-6">
                 <div className="row">
                   <div className="col-6 mb-2">
-                  <a href="/womens">
+                  <Link to="/womens">
                     <img src={jeans} className="img-fluid" alt="Right 1" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-6 mb-2">
-                  <a href="/womens">
+                  <Link to="/womens">
                     <img src={sarees} className="img-fluid" alt="Right 2" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-6">
-                  <a href="/womens">
+                  <Link to="/womens">
                     <img src={summer} className="img-fluid" alt="Right 3" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="col-6">
-                  <a href="/womens">
+                  <Link to="/womens">
                     <img src={western} className="img-fluid" alt="Right 4" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -94,33 +95,33 @@ const Main = () => {
           <div className="row border-none p-3">
             {/* Left Side: One Picture */}
             <div className="col-12 col-md-6 mb-3">
-            <a href="/mens">
+            <Link to="/mens">
             <div className="text-center"><img src={men1} className="img-fluid" alt="Left Men" /></div>
-            </a>
+            </Link>
             </div>
 
             {/* Right Side: Four Pictures */}
             <div className="col-12 col-md-6">
               <div className="row">
                 <div className="col-6 mb-2">
-                <a href="/mens">
+                <Link to="/mens">
                   <img src={men2} className="img-fluid" alt="Right Men 1" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-6 mb-2">
-                <a href="/mens">
+                <Link to="/mens">
                 <img src={men3} className="img-fluid" alt="Right Men 2" />
-                </a>
+                </Link>
                 </div>
                 <div className="col-6">
-                <a href="/mens">
+                <Link to="/mens">
                 <img src={men4} className="img-fluid" alt="Right Men 3" />
-                </a>
+                </Link>
                 </div>
                 <div className="col-6">
-                <a href="/mens">
+                <Link to="/mens">
                   <img src={men5} className="img-fluid" alt="Right Men 4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -151,9 +152,9 @@ const Main = () => {
         </div>
       </div>
       <div className="shop-now-btn">
-      <a href="/womens">
+      <Link to="/womens">
         <button>Shop Now</button>
-        </a>
+        </Link>
       </div>
     </div>
     {/* fourth section */}
@@ -171,9 +172,9 @@ const Main = () => {
               </>
             )}
              </p>
-             <a href="#" onClick={toggleReadMore} className="text-primary">
+             <Link to="#" onClick={toggleReadMore} className="text-primary">
             {isReadMore ? " Show Less" : " Read More"}
-          </a>
+          </Link>
      
     </div>
   </div>
