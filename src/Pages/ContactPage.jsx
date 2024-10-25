@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import Footer from '../Components/section/Footer/Footer'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -218,6 +219,7 @@ const ContactPage = () => {
           color: #333;
         }
       `}</style>
+      <Footer />
     </div>
   );
 };

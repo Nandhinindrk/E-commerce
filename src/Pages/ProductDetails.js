@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { mensProducts, womensProducts } from '../Components/Data/Data';
 import StarRating from '../Components/StarRating/StarRating';
 import { CartContext } from '../Components/Womens/CartContext'; // Adjust the import path
+import Footer from '../Components/section/Footer/Footer'
 import '../App.css';
 
 const ProductDetail = () => {
@@ -38,6 +39,7 @@ const ProductDetail = () => {
     }
 
     return (
+        <div className='container-c'>
         <div className="product-detail-container">
             <div className="product-image">
                 <img src={product.image} alt={product.name} />
@@ -74,6 +76,9 @@ const ProductDetail = () => {
                     )}
                 </div>
             </div>
+            
+        </div>
+        <Footer />
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { useAuth } from '../Components/Womens/AuthContext'; // Importing useAuth
 import { CartContext } from '../Components/Womens/CartContext'; // Importing CartContext for cart operations
 import { useNavigate } from 'react-router-dom'; // Importing useNavigate for redirection
 import '../App.css'; // Assuming this file contains necessary styles
+import Footer from '../Components/section/Footer/Footer'
 
 
 const Cart = () => {
@@ -61,6 +62,7 @@ const Cart = () => {
         <button className="checkout-button" onClick={handleCheckout}>
           Proceed to Checkout
         </button>
+        
       </div>
 
       <style>{`
@@ -125,7 +127,7 @@ const Cart = () => {
         }
           
       `}</style>
-      
+      <Footer />
       
     </div>
   );

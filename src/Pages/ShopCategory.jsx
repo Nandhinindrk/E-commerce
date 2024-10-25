@@ -4,6 +4,7 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slider';
 import { useCart } from '../Components/Womens/CartContext'; // Import the custom hook from CartContext
+import Footer from '../Components/section/Footer/Footer'
 
 
 const ShopCategory = () => {
@@ -148,7 +149,7 @@ const ShopCategory = () => {
           </button>
         ))}
       </div>
-      
+      <Footer />
     </div>
     
   );

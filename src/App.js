@@ -13,7 +13,6 @@ import ContactPage from './Pages/ContactPage';
 import { CartProvider } from './Components/Womens/CartContext'; // Check the path
 import Checkout from './Pages/Checkout';
 import { AuthProvider } from './Components/Womens/AuthContext';
-import Footer from './Components/section/Footer/Footer'
 
 
 const App = () => {
@@ -48,9 +47,7 @@ const App = () => {
             <Route path='/login' element={<LoginSignup />} />
           </Routes>
           <LiveChat />
-          <br></br>
-          <br></br>
-          <Footer />
+          
         </BrowserRouter>
       </CartProvider>
       </AuthProvider>

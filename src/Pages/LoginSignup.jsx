@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Components/Womens/AuthContext'; // Adjust the path as necessary
+import Footer from '../Components/section/Footer/Footer'
 
 const LoginSignup = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -49,6 +50,7 @@ const LoginSignup = () => {
   };
 
   return (
+    <div className= 'container-c'>
     <div className="login-signup-page">
       <div className="form-container">
         <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
@@ -182,6 +184,8 @@ const LoginSignup = () => {
           text-decoration: underline;
         }
       `}</style>
+      </div>
+      <Footer />
     </div>
   );
 };

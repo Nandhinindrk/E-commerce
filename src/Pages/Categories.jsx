@@ -4,6 +4,7 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slider'; // Ensure this is the correct slider import
 import { useCart } from '../Components/Womens/CartContext'; // Ensure the path is correct
+import Footer from '../Components/section/Footer/Footer'
 
 
 const Categories = () => {
@@ -153,7 +154,7 @@ const Categories = () => {
           </button>
         ))}
       </div>
-      
+      <Footer />
     </div>
   );
 };
