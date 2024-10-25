@@ -1,0 +1,144 @@
+.row h1{
+    font-family: mslondonw04-semibold;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.text-center {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100%; 
+    margin-top: 10px; 
+  }
+  
+.ctn img{
+    margin-left: 340px;
+    height:12cm;
+}
+  /* Apply to all images */
+.img-fluid {
+  border-radius: 15px; /* Curved borders */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Basic shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3D hover effect */
+.img-fluid:hover {
+  transform: translateY(-5px); /* Moves the image up slightly */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+/*second section*/
+/* FreeDeliveryBanner.css */
+body {
+  margin: 0;
+  font-family: mslondonw04-regular;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center; /* Center the banner horizontally */
+  align-items: center; /* Center the banner vertically within the container */
+  height: 100px; 
+  overflow: hidden; 
+}
+
+.banner {
+  margin-top: 110px;
+  background-color: white; /* Banner background color */
+  color: rgb(13, 13, 13); 
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+.banner img{
+  height: 3cm;
+  width: 3cm;
+}
+
+.label {
+  display: inline-block;
+  padding: 10px 20px; /* Add padding to the label */
+  animation: scroll 10s linear infinite; /* Animation for scrolling */
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(100%); /* Start off the right edge */
+  }
+  to {
+      transform: translateX(-100%); /* Move to the left edge */
+  }
+}
+.border-none {
+  border: none !important;
+}
+
+
+/*third section*/
+.third-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .featured-collections {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between collection items */
+  }
+  
+  .collection-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px; /* Adjust width as needed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .collection-item img {
+    max-width: 100%; /* Make images responsive */
+    border-radius: 8px;
+  }
+  
+  .shop-now-btn {
+    margin-top: 30px;
+  }
+  
+  .shop-now-btn button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(227, 26, 26);
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-now-btn button:hover {
+    background-color: rgb(200, 24, 24); /* Darken on hover */
+  }
+
+  /*fourth section*/
+  p{
+    font-family: mslondonw04-regular;
+  }
+  a{
+    font-family: mslondonw04-regular;
+  }

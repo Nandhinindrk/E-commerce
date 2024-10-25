@@ -1,25 +1,60 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './Components/Assets/Navbar/Navbar';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Shop from './Pages/Shop';
+import ShopCategory from './Pages/ShopCategory';
+import Categories from './Pages/Categories';
+import Cart from './Pages/Cart';
+import LoginSignup from './Pages/LoginSignup';
+import LiveChat from './Components/LiveChat/LiveChat';
+import ProductDetail from './Pages/ProductDetails';
+import ContactPage from './Pages/ContactPage';
+import { CartProvider } from './Components/Womens/CartContext'; // Check the path
+import Checkout from './Pages/Checkout';
+import { AuthProvider } from './Components/Womens/AuthContext';
+import Footer from './Components/section/Footer/Footer'
 
-function App() {
+
+const App = () => {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product, quantity) => {
+    const existingProduct = cart.find(item => item.id === product.id);
+    if (existingProduct) {
+      setCart(cart.map(item =>
+        item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
+      ));
+    } else {
+      setCart([...cart, { ...product, quantity }]);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Shop />} />
+            <Route path='/womens' element={<ShopCategory gender="women" />} />
+            <Route path='/mens' element={<Categories gender="men" />} />
+            <Route path="/product/:productId" element={<ProductDetail addToCart={addToCart} />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/cart' element={<Cart cart={cart} />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path='/login' element={<LoginSignup />} />
+          </Routes>
+          <LiveChat />
+          <br></br>
+          <br></br>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+      </AuthProvider>
     </div>
   );
-}
+};
 
 export default App;

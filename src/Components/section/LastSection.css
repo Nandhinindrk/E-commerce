@@ -1,0 +1,66 @@
+
+
+.last-section {
+    padding: 20px;
+    background-color:white; /* Light background for visibility */
+  }
+  
+  
+  .last-section-header {
+    text-align: center;
+    font-family: mslondonw04-regular;
+    background-color: black;
+    color: #ddd;
+    height: 3cm;
+    padding-top: 30px;
+  }
+  
+  .last-section-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out columns */
+    margin-top: 20px;
+  }
+  
+  .column {
+    flex: 1; /* Equal width for each column */
+    margin: 0 10px; /* Space between columns */
+    padding: 15px;
+    background-color: #ffffff; /* White background for each column */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .column p {
+    margin: 5px 0;
+  }
+  
+  .email-form {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  
+  .email-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+  }
+  
+  .submit-button {
+    padding: 10px 15px;
+    background-color: #272728;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #404045;
+  }
+  

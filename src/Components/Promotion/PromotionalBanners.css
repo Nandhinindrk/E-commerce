@@ -1,0 +1,35 @@
+/* Promotional Banner Styling */
+.promotional-container {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .promotional-banner {
+    background-color: #504e4b;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  .promotional-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .promo-button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .promo-button:hover {
+    background-color: #ff3300;
+  }
+  
+  
