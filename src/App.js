@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Components/Assets/Navbar/Navbar';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
 import Categories from './Pages/Categories';
@@ -36,8 +37,7 @@ const App = () => {
         <BrowserRouter basename="/E-commerce">
           <Navbar />
           <Routes>
-            <Route path='/' element={<Shop />} />
-            <Route path='/E-commerce' element={<Shop />} /> 
+            <Route path='/' element={<Shop />} /> 
             <Route path='/womens' element={<ShopCategory gender="women" />} />
             <Route path='/mens' element={<Categories gender="men" />} />
             <Route path="/product/:productId" element={<ProductDetail addToCart={addToCart} />} />
@@ -45,6 +45,8 @@ const App = () => {
             <Route path='/cart' element={<Cart cart={cart} />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path='/login' element={<LoginSignup />} />
+            {/* Redirect any unmatched routes back to the shop page */}
+  <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <LiveChat />
           
