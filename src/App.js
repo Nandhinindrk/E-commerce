@@ -33,7 +33,7 @@ const App = () => {
     <div>
       <AuthProvider>
       <CartProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/E-commerce">
           <Navbar />
           <Routes>
             <Route path='/' element={<Shop />} />
