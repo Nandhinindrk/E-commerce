@@ -26,3 +26,13 @@
     color: var(--bs-body-color);
     font-family: mslondonw04-regular;
   }
+
+  @media (max-width: 768px) {
+    .last-section-content {
+        flex-direction: column; /* Stacks columns vertically on small screens */
+    }
+
+    .column {
+        padding-left: 15px; /* Reset padding for smaller screens */
+    }
+}

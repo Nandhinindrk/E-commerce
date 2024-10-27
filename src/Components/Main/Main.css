@@ -42,7 +42,7 @@ body {
   justify-content: center; /* Center the banner horizontally */
   align-items: center; /* Center the banner vertically within the container */
   height: 100px; 
-  overflow: hidden; 
+
 }
 
 .banner {
