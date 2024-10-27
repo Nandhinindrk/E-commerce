@@ -34,7 +34,7 @@ This is a responsive e-commerce frontend application built with React and Bootst
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/E-commerce.git
+   git clone https://github.com/Nandhinindrk/E-commerce.git
 
 
 
