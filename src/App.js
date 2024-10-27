@@ -37,7 +37,7 @@ const App = () => {
         <BrowserRouter basename="/E-commerce">
           <Navbar />
           <Routes>
-            <Route path='/' element={<Shop />} /> 
+            <Route path='/' element={<Shop />} />
             <Route path='/womens' element={<ShopCategory gender="women" />} />
             <Route path='/mens' element={<Categories gender="men" />} />
             <Route path="/product/:productId" element={<ProductDetail addToCart={addToCart} />} />
@@ -47,6 +47,7 @@ const App = () => {
             <Route path='/login' element={<LoginSignup />} />
             {/* Redirect any unmatched routes back to the shop page */}
   <Route path="*" element={<Navigate to="/" replace />} />
+  
           </Routes>
           <LiveChat />
           
